@@ -1,0 +1,15 @@
+{
+  "sql": "SELECT * FROM 'project-love/STL-001/telemetry'",
+  "description": "Store Project LOVE telemetry in S3",
+  "actions": [
+    {
+      "s3": {
+        "roleArn": "arn:aws:iam::605383993555:role/ProjectLOVE-IoT-S3-Role",
+        "bucketName": "project-love-telemetry-605383993555",
+        "key": "telemetry/${topic(2)}/${timestamp()}.json"
+      }
+    }
+  ],
+  "ruleDisabled": false,
+  "awsIotSqlVersion": "2016-03-23"
+}

@@ -5,3 +5,13 @@ certs/
 *.crt
 __pycache__/
 .env
+
+# Terraform
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.*
+terraform/.terraform.tfstate.lock.info
+terraform/crash.log
+
+# Local AWS IoT certificates - NEVER COMMIT
+certs/
