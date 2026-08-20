@@ -10,14 +10,14 @@ The goal of Project L.O.V.E. is to demonstrate practical Cloud Engineering, DevO
 
 ## 📸 Visual Evidence  
   
-### ✅ EKS Cluster in Console  
-<img width="1423" height="663" alt="Image" src="https://github.com/user-attachments/assets/fa5ae5e5-39a2-4d20-8fbb-7185b0dd4f70" />   
+### ✅ CloudWatch Alarm History 
+<img width="1423" height="663" alt="Image" src="https://github.com/user-attachments/assets/bfe3ad9e-e5fd-44a2-b6cf-bfca44164988" />   
   
-### ✅ EC2 Node Instances 
-<img width="1423" height="690" alt="Image" src="https://github.com/user-attachments/assets/0454ced5-89e7-440b-9dcd-4f96d26a0259" /> 
+### ✅ Alarm Recovery and S3 Telemetry Verification 
+<img width="1423" height="690" alt="Image" src="https://github.com/user-attachments/assets/18d3de4f-2d88-4d0a-8399-edd28a05a73c" /> 
   
-### ✅ Security Group Details  
-<img width="1423" height="690" alt="Image" src="https://github.com/user-attachments/assets/e756a061-346f-4c0f-901a-e80c1cee7cac" />
+### ✅ Terraform Infrastructure Validation
+<img width="1423" height="690" alt="Image" src="https://github.com/user-attachments/assets/00490837-15dd-4f3d-9184-7f2b0b283a22" />
 
 ---
 
@@ -118,6 +118,8 @@ Telemetry includes:
         |                |                |
        IoT              IAM          CloudWatch/S3
 ```
+
+<img width="1672" height="941" alt="Image" src="https://github.com/user-attachments/assets/cbc35ed5-d1c4-4f36-99db-2c56ade6ff97" />
 ---
 
 # AWS Services Used
