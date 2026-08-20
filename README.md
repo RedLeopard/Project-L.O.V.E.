@@ -78,47 +78,6 @@ Telemetry includes:
 
 # Architecture
 
-```text
-                        PROJECT L.O.V.E.
-
-                    Ubuntu Linux Edge Device
-                         LOVE-EDGE-01
-                               |
-                               |
-                         Python Publisher
-                               |
-                               |
-                              MQTT
-                               |
-                               v
-                        AWS IoT Core
-                               |
-                 +-------------+-------------+
-                 |                           |
-                 |                           |
-                 v                           v
-          Amazon CloudWatch             Amazon S3
-          Logs + Metrics                Telemetry Storage
-                 |                           |
-                 |                           |
-                 v                           v
-        CloudWatch Alarm             telemetry/NY-001/
-                 |
-                 |
-                 v
-             Amazon SNS
-                 |
-                 v
-          Operations Alert
-
-
-              Terraform Infrastructure Management
-                         |
-        +----------------+----------------+
-        |                |                |
-       IoT              IAM          CloudWatch/S3
-```
-
 <img width="1672" height="941" alt="Image" src="https://github.com/user-attachments/assets/cbc35ed5-d1c4-4f36-99db-2c56ade6ff97" />
 ---
 
