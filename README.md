@@ -119,6 +119,67 @@ Telemetry includes:
        IoT              IAM          CloudWatch/S3
 ```
 
+
+flowchart LR
+
+    %% EDGE SIDE
+    subgraph EDGE["EDGE ENVIRONMENT"]
+        direction TB
+        DEVICE["Ubuntu Linux<br/>LOVE-EDGE-01"]
+        APP["Python Telemetry Publisher"]
+        SERVICE["systemd<br/>Service Recovery"]
+
+        DEVICE --> APP
+        SERVICE -. manages .-> APP
+    end
+
+
+    %% AWS CLOUD
+    subgraph AWS["AWS CLOUD"]
+        direction LR
+
+        IOT["AWS IoT Core"]
+
+        CW["Amazon CloudWatch<br/>Logs + Metrics"]
+
+        S3["Amazon S3<br/>Telemetry Storage<br/>telemetry/NY-001/"]
+
+        ALARM["CloudWatch Alarm"]
+
+        SNS["Amazon SNS<br/>Operations Alert"]
+
+        IOT --> CW
+        IOT --> S3
+        CW --> ALARM
+        ALARM --> SNS
+    end
+
+
+    %% DATA FLOW
+    APP -->|"MQTT / TLS"| IOT
+
+
+    %% INFRASTRUCTURE
+    TF["Terraform<br/>Infrastructure as Code"]
+
+    TF -. manages .-> IOT
+    TF -. manages .-> CW
+    TF -. manages .-> S3
+    TF -. manages .-> SNS
+
+
+    %% STYLING
+    classDef edge fill:#F8FAFC,stroke:#2563EB,stroke-width:2px,color:#111827;
+    classDef aws fill:#FFFDF7,stroke:#F59E0B,stroke-width:2px,color:#111827;
+    classDef monitor fill:#FAF5FF,stroke:#9333EA,stroke-width:2px,color:#111827;
+    classDef storage fill:#F0FDF4,stroke:#16A34A,stroke-width:2px,color:#111827;
+    classDef tf fill:#F5F3FF,stroke:#6D28D9,stroke-width:2px,color:#111827;
+
+    class DEVICE,APP,SERVICE edge;
+    class IOT aws;
+    class CW,ALARM,SNS monitor;
+    class S3 storage;
+    class TF tf;
 ---
 
 # AWS Services Used
