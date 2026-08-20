@@ -8,6 +8,17 @@ The project demonstrates how an edge workload can securely generate telemetry, p
 
 The goal of Project L.O.V.E. is to demonstrate practical Cloud Engineering, DevOps, Infrastructure as Code, IoT, monitoring, incident response, and Linux operations skills in one end-to-end environment.
 
+## 📸 Visual Evidence  
+  
+### ✅ EKS Cluster in Console  
+<img width="1423" height="663" alt="Image" src="https://github.com/user-attachments/assets/fa5ae5e5-39a2-4d20-8fbb-7185b0dd4f70" />   
+  
+### ✅ EC2 Node Instances 
+<img width="1423" height="690" alt="Image" src="https://github.com/user-attachments/assets/0454ced5-89e7-440b-9dcd-4f96d26a0259" /> 
+  
+### ✅ Security Group Details  
+<img width="1423" height="690" alt="Image" src="https://github.com/user-attachments/assets/e756a061-346f-4c0f-901a-e80c1cee7cac" />
+
 ---
 
 ## Project Goals
